@@ -82,3 +82,8 @@
     height: 40px;
 }
 
+button{
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+

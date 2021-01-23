@@ -46,9 +46,11 @@ function Chat() {
                 </IconButton>
             <form>
                 <input className='send_message' type="text"/>
+            <button type='submit'>
             <IconButton>
                 <SendIcon/>
             </IconButton>
+            </button>
             </form>
                 <IconButton>
                     <MicIcon className="micIcon"/>
