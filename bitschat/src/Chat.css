@@ -20,6 +20,7 @@
     flex:1;
     padding: 30px;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .chat_message{
@@ -52,3 +53,32 @@
     margin-left: 10px;
     
 }
+.chat_footer{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    height: 60px;
+}
+.send_message{
+    
+    border-radius: 20px;
+    padding: 0px;
+    border: 1px solid gray;
+    
+}
+
+.chat_footer > form
+{
+    display: flex;
+    flex:1;
+    
+}
+.chat_footer > form > input {
+    display: flex;
+    flex:1;
+    padding: 1px;
+    height: 40px;
+}
+
