@@ -21,3 +21,34 @@
     padding: 30px;
     overflow: scroll;
 }
+
+.chat_message{
+    position: relative;
+    font-size: 16px;
+    padding: 8px;
+    background-color: rgb(231, 214, 214);
+    border-radius: 10px;
+    width: fit-content; 
+    margin-bottom: 30px;;
+}
+
+.chat_reciever{
+    margin-left: auto;
+    background-color: cadetblue;
+}
+
+.chat_name{
+    position: absolute;
+    top: -20px;
+    color: rgb(2, 68, 63);
+    left: -12px;
+    font-weight: 900;
+    font-size:medium;
+}
+
+.chat_timestamp{
+    font-size: xx-small;
+    right: 1px;
+    margin-left: 10px;
+    
+}
