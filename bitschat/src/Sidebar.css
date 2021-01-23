@@ -50,5 +50,6 @@
     background-color: rgba(252, 190, 168, 0.842);
     flex: 1;
     overflow: scroll;
+    overflow-x: hidden;
     border: 1px solid white;
 }
