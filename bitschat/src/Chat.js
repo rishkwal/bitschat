@@ -1,6 +1,9 @@
 //Put source in line 10 for Avatar
 import React from 'react'
-import {Avatar} from '@material-ui/core'
+import {Avatar, IconButton} from '@material-ui/core'
+import SearchIcon from '@material-ui/icons/Search'
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
 import './Chat.css'
 
 function Chat() {
@@ -9,10 +12,21 @@ function Chat() {
 
             <div className="chat_header">
                 <Avatar src=''/>
+                
                 <div className='chat_headerInfo'>
                     <h3>Room Name</h3>
                 </div> 
-                <div className='chat_headerRight'></div>
+                <div className='chat_headerRight'>
+                    <IconButton>
+                        <SearchIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <AttachFileIcon/>
+                    </IconButton>
+                    <IconButton>
+                        <MoreVertIcon/>
+                    </IconButton>
+                </div>
             </div>
             <div className="chat_body">
 
