@@ -16,7 +16,9 @@ function Chat() {
 
 
     const sendMessage = (e) =>{
-
+        e.preventDefault();
+        console.log('object');
+        console.log("You typed >>>",input);
     }
     return (
         <div className='Chat'>
