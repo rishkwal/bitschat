@@ -47,9 +47,9 @@ return(
             </div>
             <div className='sidebar_chats'>
             <SidebarChat addNewChat/>
-            <SidebarChat/>
-            <SidebarChat/>
-            <SidebarChat/>
+            {rooms.map(room =>(
+                <SidebarChat key={rooms.id} id={rooms.id} name={room.data.name} />
+            ))}
             </div>
 
         </div>

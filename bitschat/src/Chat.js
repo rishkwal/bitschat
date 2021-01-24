@@ -12,7 +12,6 @@ import './Chat.css'
 
 function Chat() {
     const [input,setInput] = useState("");
-    const [seed, setSeed] = useState("");
 
 
     const sendMessage = (e) =>{
