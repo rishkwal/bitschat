@@ -78,7 +78,7 @@
 .chat_footer > form > input {
     display: flex;
     flex:1;
-    padding: 1px;
+    padding-left: 10px;
     height: 40px;
 }
 

@@ -7,9 +7,17 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
 import SendIcon from '@material-ui/icons/Send';
+import {useState} from 'react';
 import './Chat.css'
 
 function Chat() {
+    const [input,setInput] = useState("");
+    const [seed, setSeed] = useState("");
+
+
+    const sendMessage = (e) =>{
+
+    }
     return (
         <div className='Chat'>
 
@@ -45,8 +53,14 @@ function Chat() {
 
                 </IconButton>
             <form>
-                <input className='send_message' type="text"/>
-            <button type='submit'>
+                <input 
+                    value={input} 
+                    className='send_message' 
+                    onChange={e => setInput(e.target.value)} 
+                    type="text"
+                    placeholder = "Type a message"
+                />
+            <button onClick={sendMessage} type='submit'>
             <IconButton>
                 <SendIcon/>
             </IconButton>
