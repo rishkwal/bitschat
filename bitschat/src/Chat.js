@@ -19,6 +19,7 @@ function Chat() {
         e.preventDefault();
         console.log('object');
         console.log("You typed >>>",input);
+        setInput("");
     }
     return (
         <div className='Chat'>

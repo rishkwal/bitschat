@@ -1,8 +1,7 @@
 import './SidebarChat.css';
 import {Avatar} from '@material-ui/core';
 
-function SidebarChat({addNewChat}) {
-    var name = 'Rishabh Khandelwal';
+function SidebarChat({id, name, addNewChat}) {
     var link = `https://ui-avatars.com/api/?name=${name}`;
     const createChat =() => {
         const roomName = prompt("Please enter name for chat")
@@ -15,7 +14,7 @@ return !addNewChat ? (
 <div className='SidebarChat'>
     <Avatar src ={link}/>
     <div className = 'SidebarChat_info'>
-        <h2>Room Name</h2>
+        <h2>{name}</h2>
         <p>Last message...</p>
     </div>
 </div>

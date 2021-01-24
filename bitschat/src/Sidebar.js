@@ -5,7 +5,21 @@ import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
 import SidebarChat from './SidebarChat'
+import {useState, useEffect} from 'react';
+import db from './firebase';
 function Sidebar(){
+    const[rooms, setRooms] = useState([]);
+
+    useEffect(()=> {
+        db.collection('rooms').onSnapshot(snapshot=> (
+                setRooms(snapshot.docs.map(doc=>({
+                    id: doc.id,
+                    data: doc.data()
+                })
+            ))
+        ))
+            },[])
+
 return( 
         <div className="sidebar"> 
             <div className = 'sidebar_header'>
