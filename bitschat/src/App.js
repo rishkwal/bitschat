@@ -9,13 +9,10 @@ function App() {
     <div className="app">
       <div class="app_body">
       <Router>
+        <Sidebar/>
         <Switch>
-          <Route path="/app">
-          <Sidebar/>
+          <Route path="/rooms/:roomID">
           <Chat/>
-          </Route>
-          <Route path="/">
-            <h1>Home Screen</h1>
           </Route>
         </Switch>
       </Router>    
