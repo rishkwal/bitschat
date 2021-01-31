@@ -8,11 +8,12 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import MicIcon from '@material-ui/icons/Mic';
 import SendIcon from '@material-ui/icons/Send';
 import {useState} from 'react';
+import {useParams} from "react-router-dom";
 import './Chat.css'
 
 function Chat() {
     const [input,setInput] = useState("");
-
+    const { roomId } = useParams();
 
     const sendMessage = (e) =>{
         e.preventDefault();
@@ -20,8 +21,10 @@ function Chat() {
         console.log("You typed >>>",input);
         setInput("");
     }
+
+    
     return (
-        <div className='Chat'>
+        (<div className='Chat'>
 
             <div className="chat_header">
                 <Avatar src=''/>
@@ -73,8 +76,9 @@ function Chat() {
                 </IconButton> 
             </div>
              
-        </div>
+        </div>),roomId
     )
 }
 
 export default Chat
+

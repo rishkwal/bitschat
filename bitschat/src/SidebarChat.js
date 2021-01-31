@@ -1,6 +1,7 @@
 import './SidebarChat.css';
 import {Avatar} from '@material-ui/core';
 import db from './firebase';
+import { Link } from "react-router-dom";
 
 function SidebarChat({id, name, addNewChat}) {
     var link = `https://ui-avatars.com/api/?name=${name}`;
@@ -15,13 +16,16 @@ function SidebarChat({id, name, addNewChat}) {
     };
 
 return !addNewChat ? (
-<div className='SidebarChat'>
+    <Link to={`/rooms/${id}`}>
+        <div className='SidebarChat'>
     <Avatar src ={link}/>
     <div className = 'SidebarChat_info'>
         <h2>{name}</h2>
         <p>Last message...</p>
     </div>
 </div>
+    </Link>
+
 ): (
     <div onClick={createChat}
     className = "sidebarChat">
