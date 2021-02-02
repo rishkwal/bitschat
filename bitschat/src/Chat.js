@@ -17,8 +17,8 @@ function Chat() {
 
     const sendMessage = (e) =>{
         e.preventDefault();
-        console.log('object');
-        console.log("You typed >>>",input);
+        console.log('User:');
+        console.log(input);
         setInput("");
     }
 
@@ -31,6 +31,7 @@ function Chat() {
                 
                 <div className='chat_headerInfo'>
                     <h3>Room Name</h3>
+                    <h4>{roomId}</h4>
                 </div> 
                 <div className='chat_headerRight'>
                     <IconButton>
@@ -76,7 +77,7 @@ function Chat() {
                 </IconButton> 
             </div>
              
-        </div>),roomId
+        </div>)
     )
 }
 
