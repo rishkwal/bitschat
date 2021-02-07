@@ -8,10 +8,8 @@ function SidebarChat({id, name, addNewChat}) {
     const createChat =() => {
         const roomName = prompt("Please enter name for chat room")
     if (roomName) {
-        id = Math.random();
         db.collection('rooms').add({
             name: roomName,
-            id: id
         });
     }
     };
