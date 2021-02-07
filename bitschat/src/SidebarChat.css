@@ -2,7 +2,7 @@
     display: flex;
     padding: 20px;
     cursor: pointer;
-    border-bottom: 1px solid white;
+    border: 1px solid white;
 }
 
 .SidebarChat:hover {
@@ -15,4 +15,14 @@
 }
 .SidebarChat_info {
     margin-left: 15px;
+}
+
+.addNew
+{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(121, 50, 38);
+    border: 3px solid rgb(121, 50, 38);
+    background-color: cornsilk;
+    border-radius: 10px;
 }

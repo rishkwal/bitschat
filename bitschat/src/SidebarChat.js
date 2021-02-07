@@ -30,7 +30,7 @@ return !addNewChat ? (
 ): (
     <div onClick={createChat}
     className = "sidebarChat">
-        <h2>Add new Chat</h2>
+        <h2 class='addNew'>Add New Chat</h2>
     </div>
 
 )
