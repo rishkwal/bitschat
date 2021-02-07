@@ -19,7 +19,7 @@ function Chat() {
 
     useEffect(() => {
         if(roomId) {
-            /*db.collection('rooms').doc(roomId).onSnapshot((snapshot) => setRoomName(snapshot.data().name)); */       }
+            db.collection('rooms').doc(roomId).onSnapshot((snapshot) => setRoomName(snapshot.data().name));        }
     }, [roomId] )
 
     const sendMessage = (e) =>{
@@ -34,11 +34,10 @@ function Chat() {
         (<div className='Chat'>
 
             <div className="chat_header">
-                <Avatar src=''/>
+                <Avatar src={`https://ui-avatars.com/api/?name=${roomName}`}/>
                 
                 <div className='chat_headerInfo'>
                     <h3>{roomName}</h3>
-                    <h4>{roomId}</h4>
                 </div> 
                 <div className='chat_headerRight'>
                     <IconButton>
