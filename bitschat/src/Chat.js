@@ -19,7 +19,7 @@ function Chat() {
 
     useEffect(() => {
         if(roomId) {
-            db.collection('rooms').doc(roomId).onSnapshot((snapshot) => setRoomName(snapshot.data().name));        }
+            /*db.collection('rooms').doc(roomId).onSnapshot((snapshot) => setRoomName(snapshot.data().name)); */       }
     }, [roomId] )
 
     const sendMessage = (e) =>{
@@ -60,9 +60,9 @@ function Chat() {
                 <span className = 'chat_timestamp'>4:20AM</span>
                 </p>
                 <p className = {`chat_message ${false && `chat_reciever`}`}>
-                <span className = 'chat_name'>~Rishabh</span>
-                    Hey  
-                <span className = 'chat_timestamp'>4:20AM</span>
+                <span className = 'chat_name'>~Arjun</span>
+                    High?  
+                <span className = 'chat_timestamp'>4:22AM</span>
                 </p>
             </div>
             <div className="chat_footer">

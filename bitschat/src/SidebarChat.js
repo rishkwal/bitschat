@@ -22,7 +22,7 @@ return !addNewChat ? (
     <Avatar src ={avatarLink}/>
     <div className = 'SidebarChat_info'>
         <h2>{name}</h2>
-        <p>Last message...</p>
+        <p>Last message...</p> 
     </div>
 </div>
     </Link>
