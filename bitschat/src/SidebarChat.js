@@ -4,7 +4,7 @@ import db from './firebase';
 import { Link } from "react-router-dom";
 
 function SidebarChat({id, name, addNewChat}) {
-    var link = `https://ui-avatars.com/api/?name=${name}`;
+    var avatarLink = `https://ui-avatars.com/api/?name=${name}`;
     const createChat =() => {
         const roomName = prompt("Please enter name for chat room")
     if (roomName) {
@@ -19,7 +19,7 @@ function SidebarChat({id, name, addNewChat}) {
 return !addNewChat ? (
     <Link to={`/rooms/${id}`}>
         <div className='SidebarChat'>
-    <Avatar src ={link}/>
+    <Avatar src ={avatarLink}/>
     <div className = 'SidebarChat_info'>
         <h2>{name}</h2>
         <p>Last message...</p>

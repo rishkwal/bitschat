@@ -59,6 +59,11 @@ function Chat() {
                     Hey  
                 <span className = 'chat_timestamp'>4:20AM</span>
                 </p>
+                <p className = {`chat_message ${false && `chat_reciever`}`}>
+                <span className = 'chat_name'>~Rishabh</span>
+                    Hey  
+                <span className = 'chat_timestamp'>4:20AM</span>
+                </p>
             </div>
             <div className="chat_footer">
                 <IconButton>
