@@ -20,7 +20,21 @@ function Chat() {
 
     useEffect(() => {
         if(roomId) {
-            db.collection('rooms').doc(roomId).onSnapshot((snapshot) => setRoomName(snapshot.data().name));        }
+            db.collection('rooms')
+            .doc(roomId)
+            .onSnapshot((snapshot) => setRoomName
+            (snapshot.data().name));
+        
+            db.collection('rooms')
+            .doc(roomId)
+            .collection("messages")
+            .orderBy('timestamp', 'asc')
+            .onSnapshot((snapshot)=> 
+                    setMessages(snapshot.docs.map((doc) =>
+                    doc.data()))
+                
+                    );
+                }
     }, [roomId] )
 
     const sendMessage = (e) =>{
@@ -29,15 +43,7 @@ function Chat() {
         console.log(input);
         setInput("");
 
-        db.collection('rooms')
-        .doc(roomId)
-        .collection("messages")
-        .orderBy('timestamp', 'asc')
-        .onSnapshot((snapshot)=> 
-                setMessages(snapshot.docs.map((doc) =>
-                doc.data()))
-            
-                );
+        
     }
 
     
@@ -63,17 +69,20 @@ function Chat() {
                 </div>
             </div>
             <div className="chat_body">
-                
-                <p className = {`chat_message ${true && `chat_reciever`}`}>
-                <span className = 'chat_name'>~Rishabh</span>
-                    Hey  
-                <span className = 'chat_timestamp'>4:20AM</span>
+                {messages.map((message) =>(
+                    <p className = {`chat_message ${true && `chat_reciever`}`}>
+                <span className = 'chat_name'>~{message.name}</span>
+                    {message.message}  
+                <span className = 'chat_timestamp'>{new Date(message.timestamp?.toDate()).toUTCString()}
+                </span>
                 </p>
-                <p className = {`chat_message ${false && `chat_reciever`}`}>
+                ))}'
+                
+                {/*<p className = {`chat_message ${false && `chat_reciever`}`}>
                 <span className = 'chat_name'>~Arjun</span>
                     High?  
                 <span className = 'chat_timestamp'>4:22AM</span>
-                </p>
+                </p>*/}
             </div>
             <div className="chat_footer">
                 <IconButton>
