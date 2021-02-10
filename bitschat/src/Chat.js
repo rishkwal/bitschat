@@ -11,12 +11,15 @@ import {useState, useEffect} from 'react';
 import {useParams} from "react-router-dom";
 import './Chat.css'
 import db from './firebase';
+import firebase from 'firebase';
+import { useStateValue } from './StateProvider';
 
 function Chat() {
     const [input,setInput] = useState("");
     const { roomId } = useParams();
     const [roomName, setRoomName] = useState("");
     const [messages, setMessages] = useState([]);
+    const [{user}, dispatch] = useStateValue();
 
     useEffect(() => {
         if(roomId) {
@@ -41,6 +44,13 @@ function Chat() {
         e.preventDefault();
         console.log('User:');
         console.log(input);
+
+        db.collection('rooms').doc(roomId).collection('messages').add({
+            message: input,
+            name: user.displayName,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+        })
+
         setInput("");
 
         
