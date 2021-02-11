@@ -10,11 +10,17 @@
 }
 
 .SidebarChat_info > h2 {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 8px;
 }
 .SidebarChat_info {
     margin-left: 15px;
+   
+}
+
+a {
+    text-decoration: none !important;
+    color: rgb(116, 23, 23);
 }
 
 .addNew
