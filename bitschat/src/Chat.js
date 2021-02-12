@@ -86,7 +86,7 @@ function Chat() {
                 <span className = 'chat_timestamp'>{new Date(message.timestamp?.toDate()).toUTCString()}
                 </span>
                 </p>
-                ))}'
+                ))}
                 
                 {/*<p className = {`chat_message ${false && `chat_reciever`}`}>
                 <span className = 'chat_name'>~Arjun</span>
