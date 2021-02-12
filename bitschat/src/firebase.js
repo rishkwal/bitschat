@@ -14,6 +14,11 @@ const firebaseConfig = {
   const db = firebaseApp.firestore();
   const auth = firebase.auth();
   const provider = new firebase.auth.GoogleAuthProvider();
+  provider.setCustomParameters({
+    'hd': 'hyderabad.bits-pilani.com',
+    'login_hint': 'hyderabad.bits-pilani.com'
+  });
+  
 
   export {auth, provider};
   export default db;
