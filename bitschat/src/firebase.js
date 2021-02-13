@@ -15,8 +15,8 @@ const firebaseConfig = {
   const auth = firebase.auth();
   const provider = new firebase.auth.GoogleAuthProvider();
   provider.setCustomParameters({
-    'hd': 'hyderabad.bits-pilani.com',
-    'login_hint': 'hyderabad.bits-pilani.com'
+    'hd': 'hyderabad.bits-pilani.ac.in',
+    'login_hint': 'hyderabad.bits-pilani.ac.in'
   });
   
 
