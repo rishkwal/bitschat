@@ -47,6 +47,7 @@ function Chat() {
 
         db.collection('rooms').doc(roomId).collection('messages').add({
             message: input,
+            email: user.email,
             name: user.displayName,
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
         })
@@ -80,7 +81,7 @@ function Chat() {
             </div>
             <div className="chat_body">
                 {messages.map((message) =>(
-                    <p className = {`chat_message ${message.name === user.displayName && `chat_reciever`}`}>
+                    <p className = {`chat_message ${message.email === user.email && `chat_reciever`}`}>
                 <span className = 'chat_name'>~{message.name}</span>
                     {message.message}  
                 <span className = 'chat_timestamp'>{new Date(message.timestamp?.toDate()).toUTCString()}
