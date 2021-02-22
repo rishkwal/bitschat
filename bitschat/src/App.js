@@ -11,7 +11,7 @@ function App() {
   return (
     
     <div className="app">
-      {!user ?(
+      {(!user || !user.email.endsWith('bits-pilani.ac.in')) ?(
         <Login/>
       ) :(
       <div class="app_body">
