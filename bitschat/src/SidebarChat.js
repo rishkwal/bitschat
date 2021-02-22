@@ -23,12 +23,14 @@ useEffect(()=> {
 },[id]);
 
     const createChat =() => {
+    alert("Enter the name of the Room in 'ChatRoom Suggestion' Room");
+        /*
         const roomName = prompt("Please enter name for chat room")
     if (roomName) {
         db.collection('rooms').add({
             name: roomName,
         });
-    }
+    }*/
     };
 
 return !addNewChat ? (
