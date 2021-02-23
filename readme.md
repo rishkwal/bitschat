@@ -1,3 +1,5 @@
 # Bitschat
 
-This is an instant messaging app based on React. Still under construction.
+Chatting Web App Live [here](https://bitschatcrux.web.app)
+
+Login using Bitsmail only(Other emails won't work)
